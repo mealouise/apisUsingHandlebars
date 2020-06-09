@@ -1,5 +1,14 @@
 <h1>Star Wars Characters</h1>
 
-<p>Name: {{name}}</p>
+<form action="starwars" method="post">
+    <input type="number" name="number">
+    <input type="submit" value="submit">
+</form>
+<ul>
+    {{#each response}}
+        <li>{{@key}} : {{this}}</li>
+    {{/each}}
+</ul>
+{{!-- <p>Name: {{name}}</p>
 <p>Birthyear: {{birthyear}}</p>
-<a href={{homeworld}}>Homeworld</a>
+{{!-- <a href={{homeworld}}>Homeworld</a> --}}

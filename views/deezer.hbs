@@ -1,6 +1,21 @@
 
+<h1>Song info</h1>
 
-<p>Title: {{title}}</p>
-<p>Preview:</p>
-<a href={{preview}}>click here</a>
-<a href={{link}}></a>
+<form action="deezer" method="post">
+            <input type="text" name="artist">
+            <input type="submit" value="submit">
+        </form>
+
+<ul>
+    {{#each musicInfo }}
+        <li>
+            <img src={{this.album.cover}}>
+            {{@key}} : {{this.title}}
+            {{this.name}}
+            {{this.album.title}}
+            {{this.duration}}
+            <a href="{{this.preview}}" target="blank" title="{{this.title}} song preview">Preview</a>
+        </li>
+
+    {{/each}}
+</ul>

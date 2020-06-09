@@ -1,12 +1,38 @@
 <h1>Movie Database</h1>
 
+<div class="moviedatabase-results">
+    <div class="moviedatabase-container">
 
-<div class="moviedatabase-container">
-    <div class="moviedatabase-header">
-        <h2 class="moviedatabase-title">{{title}}</h2>
-        <p>{{released}}</p>
+        <form action="moviedatabase" method="post">
+            <input type="text" name="film">
+            <input type="submit" value="submit">
+        </form>
+
+
+
+        <div class="moviedatabase-header">
+            <h2 class="moviedatabase-title">{{title}}</h2>
+            <p>{{year}}</p>
+            <p>{{rating}} | {{runtime}} | {{genre}} | {{released}} </p>
+        </div>
+        
+        <img src={{poster}}>
+        <div class="moviedatabase-plot">
+            <p>{{plot}}</p>
+        </div>
+    
     </div>
-    <p>Genre: {{genre}} </p>
-    <p>Poster</p>
-    <img src={{poster}}>
 </div>
+
+{{!-- <ul>
+    {{#each musicInfo }}
+        <li>
+            <div class="moviedatabase-header">
+                <h2 class="moviedatabase-title">{{this.title}}</h2>
+                <p>{{this.year}}</p>
+                <p>{{this.rating}} | {{this.runtime}} | {{this.genre}} | {{this.released}} </p>
+            </div>
+        </li>
+
+    {{/each}}
+</ul> --}}
